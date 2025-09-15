@@ -31,7 +31,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/")
+      .get("https://backend-mu-lime.vercel.app/")
       .then((response) => setMessage(response.data.message))
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
