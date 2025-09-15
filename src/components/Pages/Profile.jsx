@@ -14,7 +14,7 @@ const Profile = () => {
       return;
     }
 
-    fetch("http://localhost:8000/api/v1/profile", {
+    fetch("https://backend-mu-lime.vercel.app/api/v1/profile", {
       headers: {
         Authorization: `Bearer ${token}`,
       },

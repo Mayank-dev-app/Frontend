@@ -28,7 +28,7 @@ const CreateAccount = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await axios.post("http://localhost:8000/user", formData);
+      const response = await axios.post("https://backend-mu-lime.vercel.app/user", formData);
       alert(response.data.message);
 
       // Clear form fields after success

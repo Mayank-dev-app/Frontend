@@ -26,7 +26,7 @@ const Login = () => {
     setLoading(true);
     console.log(formData);
     try {
-      const response = await axios.post("http://localhost:8000/signIn", formData);
+      const response = await axios.post("https://backend-mu-lime.vercel.app/signIn", formData);
       alert(response.data.message);
       const token = response.data.token;
       console.log(response.data);

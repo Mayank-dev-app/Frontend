@@ -19,7 +19,7 @@ const Home = () => {
       return;
     }
 
-    fetch("http://localhost:8000/api/v1/showAllPosts", {
+    fetch("https://backend-mu-lime.vercel.app/api/v1/showAllPosts", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -36,7 +36,7 @@ const Home = () => {
     const token = localStorage.getItem("token");
 
     try {
-      const res = await fetch(`http://localhost:8000/api/v1/like-post/${postId}`, {
+      const res = await fetch(`https://backend-mu-lime.vercel.app/api/v1/like-post/${postId}`, {
         method: "PUT",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -67,7 +67,7 @@ const Home = () => {
     if (!comment || !comment.trim()) return;
 
     try {
-      const res = await fetch("http://localhost:8000/api/v1/comment", {
+      const res = await fetch("https://backend-mu-lime.vercel.app/api/v1/comment", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

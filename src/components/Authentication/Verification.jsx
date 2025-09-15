@@ -26,7 +26,7 @@ const Verification = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await axios.post("http://localhost:8000/verifyuser", formData);
+      const response = await axios.post("https://backend-mu-lime.vercel.app/verifyuser", formData);
       alert(response.data.message);
       localStorage.setItem("token", response.data.token);
       localStorage.setItem("userId", response.data.userId);
